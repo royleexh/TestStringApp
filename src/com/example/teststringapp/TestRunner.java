@@ -1,14 +1,15 @@
 package com.example.teststringapp;
 
-import com.test.ExampleSuite;
-
 import junit.framework.AssertionFailedError;
 import junit.framework.Test;
 import junit.framework.TestListener;
 import android.app.Activity;
 import android.test.AndroidTestRunner;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.test.ExampleSuite;
 
 public class TestRunner implements Runnable,TestListener {
 	

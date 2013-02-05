@@ -2,8 +2,10 @@ package com.example.teststringapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -15,6 +17,9 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        TextView failureCounterText = (TextView)findViewById( R.id.failureCounter );
+        failureCounterText.setMovementMethod(ScrollingMovementMethod.getInstance());
         
         Button launcherButton = (Button)findViewById( R.id.launch_button );
         launcherButton.setOnClickListener( new View.OnClickListener() {
