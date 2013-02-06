@@ -44,7 +44,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/errorCounter"
         android:singleLine="false"  
-	    android:maxLines="10"  
+	    android:maxLines="18"  
 	    android:scrollbars="vertical"
         android:text="" />
 
