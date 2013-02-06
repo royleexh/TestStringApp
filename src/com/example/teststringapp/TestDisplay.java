@@ -11,7 +11,8 @@ public class TestDisplay implements Runnable {
     int testCounter;
     int errorCounter;
     int failureCounter;
-    String faleText;
+    String errorText;
+    String failedText;
     
     TextView statusText;
     TextView testCounterText;
@@ -23,7 +24,8 @@ public class TestDisplay implements Runnable {
                     int testCounter,
                     int errorCounter,
                     int failureCounter,
-                    String faleText,
+                    String errorText,
+                    String failedText,
                     TextView statusText,
                     TextView testCounterText,
                     TextView errorCounterText,
@@ -34,7 +36,8 @@ public class TestDisplay implements Runnable {
         this.testCounter = testCounter;
         this.errorCounter = errorCounter;
         this.failureCounter = failureCounter;
-        this.faleText = faleText;
+        this.errorText = errorText;
+        this.failedText = failedText;
         this.statusText = statusText;
         this.testCounterText = testCounterText;
         this.errorCounterText = errorCounterText;
@@ -67,6 +70,6 @@ public class TestDisplay implements Runnable {
         testCounterText.setText( "Tests: "+testCounter );
         errorCounterText.setText( "Errors: "+errorCounter );
         
-        failureCounterText.setText( "Failure: "+faleText );
+        failureCounterText.setText( "Failure: "+ failedText);
     }
 }

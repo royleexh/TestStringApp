@@ -5,7 +5,6 @@ import junit.framework.Test;
 import junit.framework.TestListener;
 import android.app.Activity;
 import android.test.AndroidTestRunner;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -20,8 +19,10 @@ public class TestRunner implements Runnable,TestListener {
     int errorCounter;
     /** 失败个数 */
     int failureCounter;
+    /** 错误信息 */
+    String errorText;
     /** 失败信息 */
-    String faleText;
+    String failedText;
     
     TextView statusText;
     TextView testCounterText;
@@ -40,7 +41,8 @@ public class TestRunner implements Runnable,TestListener {
         testCounter = 0;
         errorCounter = 0;
         failureCounter = 0;
-        faleText = "";
+        errorText = "";
+        failedText = "";
         statusText = (TextView)parentActivity.
                                 findViewById( R.id.status );
         testCounterText = (TextView)parentActivity.
@@ -67,13 +69,17 @@ public class TestRunner implements Runnable,TestListener {
         Log.d( LOG_TAG, t.getMessage(), t );
         ++errorCounter;
         
+        errorText += "\n("+errorCounter+"),"+test.getClass().getName()+
+        		"=>"+
+        		t.toString()+";";
         TestDisplay td = new TestDisplay(
                 TestDisplay.displayEvent.ERROR,
                 test.getClass().getName(),
                 testCounter,
                 errorCounter,
                 failureCounter,
-                faleText,
+                errorText,
+                failedText,
                 statusText,
                 testCounterText,
                 errorCounterText,
@@ -88,7 +94,7 @@ public class TestRunner implements Runnable,TestListener {
         Log.d( LOG_TAG, "Faled "+ t.toString(), t );
         ++failureCounter;
         
-        faleText += "\n("+failureCounter+"),"+test.getClass().getName()+
+        failedText += "\n("+failureCounter+"),"+test.getClass().getName()+
         		"=>"+
         		t.toString()+";";
         
@@ -98,7 +104,8 @@ public class TestRunner implements Runnable,TestListener {
                 testCounter,
                 errorCounter,
                 failureCounter,
-                faleText,
+                errorText,
+                failedText,
                 statusText,
                 testCounterText,
                 errorCounterText,
@@ -117,7 +124,8 @@ public class TestRunner implements Runnable,TestListener {
                 testCounter,
                 errorCounter,
                 failureCounter,
-                faleText,
+                errorText,
+                failedText,
                 statusText,
                 testCounterText,
                 errorCounterText,
@@ -137,7 +145,8 @@ public class TestRunner implements Runnable,TestListener {
                 testCounter,
                 errorCounter,
                 failureCounter,
-                faleText,
+                errorText,
+                failedText,
                 statusText,
                 testCounterText,
                 errorCounterText,
