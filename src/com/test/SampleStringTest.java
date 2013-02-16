@@ -19,261 +19,261 @@ public class SampleStringTest extends TestCase{
 		
 	}
 	
-	/*æœ‰æ•ˆå€¼min*/
+	/*ÓĞĞ§Öµmin*/
 	public void testCharAt1(){
 		String str = "abc12$%";
 		assertEquals("testCharAt1", 'a', str.charAt(0));
 	}
 	
-	/*æœ‰æ•ˆå€¼max*/
+	/*ÓĞĞ§Öµmax*/
 	public void testCharAt2(){
 		String str = "abc12$%";
 		assertEquals("testCharAt2", '%', str.charAt(str.length()-1));
 	}
 	
-	/*æ— æ•ˆå€¼lesser*/
+	/*ÎŞĞ§Öµlesser*/
 	public void testInvalidCharAt1(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCharAt1", 'b', str.charAt(-1));
 	}
 	
-	/*æ— æ•ˆå€¼more*/
+	/*ÎŞĞ§Öµmore*/
 	public void testInvalidCharAt2(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCharAt2", 'b', str.charAt(str.length()));
 	}
 	
-	/*æœ‰æ•ˆå€¼min*/
+	/*ÓĞĞ§Öµmin*/
 	public void testCodePointAt1(){
 		String str = "abc12$%";
 		assertEquals("testCodePointAt1", 97, str.codePointAt(0));
 	}
 	
-	/*æœ‰æ•ˆå€¼max*/
+	/*ÓĞĞ§Öµmax*/
 	public void testCodePointAt2(){
 		String str = "abc12$%";
 		assertEquals("testCodePointAt2", 37, str.codePointAt(str.length()-1));
 	}
 	
-	/*æ— æ•ˆå€¼lesser*/
+	/*ÎŞĞ§Öµlesser*/
 	public void testInvalidCodePointAt1(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointAt1", 0, str.codePointAt(-1));
 	}
 	
-	/*æ— æ•ˆå€¼more*/
+	/*ÎŞĞ§Öµmore*/
 	public void testInvalidCodePointAt2(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointAt2", 0, str.codePointAt(str.length()));
 	}
 	
-	/*æœ‰æ•ˆå€¼min*/
+	/*ÓĞĞ§Öµmin*/
 	public void testCodePointBefore1(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointAt2", 97, str.codePointBefore(1));
 	}
 	
-	/*æœ‰æ•ˆå€¼max*/
+	/*ÓĞĞ§Öµmax*/
 	public void testCodePointBefore2(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointAt2", 37, str.codePointBefore(str.length()));
 	}
 	
-	/*æ— æ•ˆå€¼lesser*/
+	/*ÎŞĞ§Öµlesser*/
 	public void testInvalidCodePointBefore1(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointBefore1", 0, str.codePointBefore(0));
 	}
 	
-	/*æ— æ•ˆå€¼more*/
+	/*ÎŞĞ§Öµmore*/
 	public void testInvalidCodePointBefore2(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointBefore2", 0, str.codePointBefore(str.length()+1));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testCodePointCount(){
 		String str = "abc12$%";
 		assertEquals("testCodePointCount", 7, str.codePointCount(0,str.length()));
 	}
 	
-	/*æ— æ•ˆå€¼,å¼€å§‹ä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,¿ªÊ¼Îª¸º*/
 	public void testInvalidCodePointCount1(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointCount1", 0, str.codePointCount(-1,2));
 	}
 	
-	/*æ— æ•ˆå€¼,countä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,countÎª¸º*/
 	public void testInvalidCodePointCount2(){
 		String str = "abc12$%";
 		assertEquals("testInvalidCodePointCount2", 0, str.codePointCount(0,-1));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testCompareTo(){
 		String str1 = "hello";
 		String str2 = "hello";
 		assertEquals("testCompareTo", 0, str1.compareTo(str2));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidCompareTo(){
 		String str = "hello";
 		assertEquals("testInvalidCompareTo", 0, str.compareTo(null));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testCompareToIgnoreCase(){
 		String str1 = "hello";
 		String str2 = "HELlo";
 		assertEquals("testCompareToIgnoreCase", 0, str1.compareToIgnoreCase(str2));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidCompareToIgnoreCase(){
 		String str = "hello";
 		assertEquals("testInvalidCompareToIgnoreCase", 0, str.compareToIgnoreCase(null));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testConcat(){
 		String str1 = "Hello";
 		String str2 = "java";
         assertEquals("testConcat", "Hellojava", str1.concat(str2));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidConcat(){
 		String str1 = "Hello";
 		assertEquals("testInvalidConcat", "Hellojava", str1.concat(null));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testContains(){
 		String str1 = "hello";
 		String str2 = "el";
 		assertTrue("testContains", str1.contains(str2));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidContains(){
 		String str = "hello";
 		assertTrue("testInvalidContains", str.contains(null));
 	}
 	
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testContentEquals1(){
 		String str1 = "hello";
 		String str2 = "hello";
 		assertTrue("testContentEquals1", str1.contentEquals(str2));
 	}
 	
-	/*æœ‰æ•ˆå€¼2*/
+	/*ÓĞĞ§Öµ2*/
 	public void testContentEquals2(){
 		String str1 = "hello";
 		StringBuffer str2 = new StringBuffer("hello");
 		assertTrue("testContentEquals2", str1.contentEquals(str2));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidContentEquals(){
 		String str1 = "hello";
 		assertTrue("testInvalidContentEquals", str1.contentEquals(null));
 	}
 	
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testCopyValueOf1(){
 		char[] data = {'a','b','c','d'};
 		assertEquals("testCopyValueOf1", "abcd", String.copyValueOf(data));
 	}
 
-	/*æœ‰æ•ˆå€¼2*/
+	/*ÓĞĞ§Öµ2*/
 	public void testCopyValueOf2(){
 		char[] data = {'a','b','c','d'};
 		assertEquals("testCopyValueOf2", "c", String.copyValueOf(data, 2, 1));
 	}
 	
-	/*æ— æ•ˆå€¼1*/
+	/*ÎŞĞ§Öµ1*/
 	public void testInvalidCopyValueOf1(){
 		assertEquals("testInvalidCopyValueOf1", "abcd", String.copyValueOf(null));
 	}
 	
-	/*æ— æ•ˆå€¼2*/
+	/*ÎŞĞ§Öµ2*/
 	public void testInvalidCopyValueOf2(){
 		char[] data = {'a','b','c','d'};
 		assertEquals("testInvalidCopyValueOf2", "abcd", String.copyValueOf(data, 2, 3));
 	}
 	
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testEndsWith1(){
 		String str = "hello";
         String s = "lo";
         assertTrue("testEndsWith1", str.endsWith(s));
 	}
 
-	/*æœ‰æ•ˆå€¼2*/
+	/*ÓĞĞ§Öµ2*/
 	public void testEndsWith2(){
 		String str = "hello";
 		String s = "";
 		assertTrue("testEndsWith2", str.endsWith(s));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidEndsWith(){
 		String str = "hello";
 		String s = null;
 		assertTrue("testInvalidEndsWith", str.endsWith(s));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testEquals(){
 		String a = "string";
         String b = "string";
         assertTrue("testEquals", a.equals(b));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidEquals(){
 		String a = "String";
 		String b = null;
 		assertTrue("testInvalidEquals", a.equals(b));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testEqualsIgnoreCase(){
 		String a = "String";
 		String b = "STRING";
 		assertTrue("testEqualsIgnoreCase", a.equalsIgnoreCase(b));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidEqualsIgnoreCase(){
 		String a = "String";
 		String b = null;
 		assertTrue("testInvalidEqualsIgnoreCase", a.equalsIgnoreCase(b));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testFormat(){
 		
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidFormat(){
 		
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testGetBytes(){
 		
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidGetBytes(){
 		
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testGetChars(){
 		String str = "Str";
 		char[] ch = {'a','b','c'};
@@ -281,7 +281,7 @@ public class SampleStringTest extends TestCase{
 		System.out.println(ch);
 	}
 	
-	/*æ— æ•ˆå€¼,srcBegin ä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,srcBegin Îª¸º*/
 	public void testInvalidGetChars1(){
 		String str = "Str";
 		char[] ch = {'a','b','c'};
@@ -289,7 +289,7 @@ public class SampleStringTest extends TestCase{
 		System.out.println(ch);
 	}
 	
-	/*æ— æ•ˆå€¼,srcBegin å¤§äº srcEnd*/
+	/*ÎŞĞ§Öµ,srcBegin ´óÓÚ srcEnd*/
 	public void testInvalidGetChars2(){
 		String str = "Str";
 		char[] ch = {'a','b','c'};
@@ -297,7 +297,7 @@ public class SampleStringTest extends TestCase{
 		System.out.println(ch);
 	}
 	
-	/*æ— æ•ˆå€¼,srcEnd å¤§äºæ­¤å­—ç¬¦ä¸²çš„é•¿åº¦*/
+	/*ÎŞĞ§Öµ,srcEnd ´óÓÚ´Ë×Ö·û´®µÄ³¤¶È*/
 	public void testInvalidGetChars3(){
 		String str = "Str";
 		char[] ch = {'a','b','c'};
@@ -305,7 +305,7 @@ public class SampleStringTest extends TestCase{
 		System.out.println(ch);
 	}
 	
-	/*æ— æ•ˆå€¼,dstBegin ä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,dstBegin Îª¸º*/
 	public void testInvalidGetChars4(){
 		String str = "Str";
 		char[] ch = {'a','b','c'};
@@ -313,7 +313,7 @@ public class SampleStringTest extends TestCase{
 		System.out.println(ch);
 	}
 	
-	/*æ— æ•ˆå€¼,dstBegin+(srcEnd-srcBegin) å¤§äº dst.length*/
+	/*ÎŞĞ§Öµ,dstBegin+(srcEnd-srcBegin) ´óÓÚ dst.length*/
 	public void testInvalidGetChars5(){
 		String str = "Stri";
 		char[] ch = {'a','b','c'};
@@ -321,68 +321,68 @@ public class SampleStringTest extends TestCase{
 		System.out.println(ch);
 	}
 	
-	/*å¾—åˆ°å“ˆå¸Œå€¼*/
+	/*µÃµ½¹şÏ£Öµ*/
 	public void testHashCode(){
 		String str = "String";
 		assertEquals("testHashCode", -1808118735 , str.hashCode());
 	}
 	
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testIndexOf1(){
 		String str = "String";
 		assertEquals("testIndexOf1", 3, str.indexOf("i"));
 	}
 	
-	/*æœ‰æ•ˆå€¼ï¼Œä¸å­˜åœ¨çš„ç´¢å¼•ä¸º-1*/
+	/*ÓĞĞ§Öµ£¬²»´æÔÚµÄË÷ÒıÎª-1*/
 	public void testIndexOf2(){
 		String str = "S";
 		assertEquals("testIndexOf2", -1, str.indexOf("i"));
 	}
 	
-	/*æœ‰æ•ˆå€¼,""çš„ç´¢å¼•ä¸º0*/
+	/*ÓĞĞ§Öµ,""µÄË÷ÒıÎª0*/
 	public void testIndexOf3(){
 		String str = "String";
 		assertEquals("testIndexOf2", 0, str.indexOf(""));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidIndexOf(){
 		String str = "String";
 		assertEquals("testInvalidIndexOf", 3, str.indexOf(null));
 	}
 	
-	/*è§„èŒƒåŒ–è¡¨ç¤ºå½¢å¼*/
+	/*¹æ·¶»¯±íÊ¾ĞÎÊ½*/
 	public void testIntern(){
 		String str = "String";
 		assertSame("testIntern", str, str.intern());
 		assertSame("testIntern", "String", str.intern());
 	}
 	
-	/*æ˜¯å¦ä¸ºç©º*/
+	/*ÊÇ·ñÎª¿Õ*/
 	public void testIsEmpty(){
 		String str = "";
 		assertTrue("testIsEmpty", str.isEmpty());
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testLastIndexOf1(){
 		String str = "Stiring";
 		assertEquals("testLastIndexOf1", 4, str.lastIndexOf("i"));
 	}
 	
-	/*æœ‰æ•ˆå€¼ï¼Œ""çš„ç´¢å¼•ä¸ºstr.length()*/
+	/*ÓĞĞ§Öµ£¬""µÄË÷ÒıÎªstr.length()*/
 	public void testLastIndexOf2(){
 		String str = "Stiring";
 		assertEquals("testLastIndexOf2", str.length(), str.lastIndexOf(""));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidLastIndexOf(){
 		String str = "Stiring";
 		assertEquals("testInvalidLastIndexOf", 4, str.lastIndexOf(null));
 	}
 	
-	/*å¾—åˆ°é•¿åº¦*/
+	/*µÃµ½³¤¶È*/
 	public void testlength(){
 		String str = "String";
 		assertEquals("testlength", 6, str.length());
@@ -392,107 +392,107 @@ public class SampleStringTest extends TestCase{
 		
 	}
 
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testOffsetByCodePoints1(){
 		String str = "abc12$%";
 		assertEquals("testOffsetByCodePoints1", 2, str.offsetByCodePoints(0,2));
 	}
 	
-	/*æœ‰æ•ˆå€¼2*/
+	/*ÓĞĞ§Öµ2*/
 	public void testOffsetByCodePoints2(){
 		String str = "abc12$%";
 		System.out.println(str.length());
 		assertEquals("testOffsetByCodePoints2", 5, str.offsetByCodePoints(str.length(),-2));
 	}
 	
-	/*æ— æ•ˆå€¼,index ä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,index Îª¸º*/
 	public void testInvalidOffsetByCodePoints1(){
 		String str = "abc12$%";
 		assertEquals("testInvalidOffsetByCodePoints1", 0, str.offsetByCodePoints(-1,2));
 	}
 	
-	/*æ— æ•ˆå€¼,å¤§äºæ­¤ String çš„é•¿åº¦*/
+	/*ÎŞĞ§Öµ,´óÓÚ´Ë String µÄ³¤¶È*/
 	public void testInvalidOffsetByCodePoints2(){
 		String str = "abc12$%";
 		assertEquals("testInvalidOffsetByCodePoints2", 0, str.offsetByCodePoints(str.length()+1,-3));
 	}
 	
-	/*æ— æ•ˆå€¼,codePointOffset ä¸ºæ­£*/
+	/*ÎŞĞ§Öµ,codePointOffset ÎªÕı*/
 	public void testInvalidOffsetByCodePoints3(){
 		String str = "abc12$%";
 		assertEquals("testInvalidOffsetByCodePoints3", 0, str.offsetByCodePoints(str.length(),3));
 	}
 	
-	/*æ— æ•ˆå€¼,codePointOffset ä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,codePointOffset Îª¸º*/
 	public void testInvalidOffsetByCodePoints4(){
 		String str = "abc12$%";
 		assertEquals("testInvalidOffsetByCodePoints4", 0, str.offsetByCodePoints(0,-3));
 	}
 	
-	/*æœ‰æ•ˆå€¼*/
+	/*ÓĞĞ§Öµ*/
 	public void testRegionMatches(){
 		String str1 = "String";
 		String str2 = "javaString";
 		assertTrue("testRegionMatches", str1.regionMatches(0, str2, 4, str1.length()));
 	}
 	
-	/*æ— æ•ˆå€¼ï¼ŒthisStartä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ£¬thisStartÎª¸º*/
 	public void testInvalidRegionMatches1(){
 		String str1 = "String";
 		String str2 = "javaString";
 		assertTrue("testInvalidRegionMatches1", str1.regionMatches(-1, str2, 4, str1.length()));
 	}
 	
-	/*æ— æ•ˆå€¼ï¼Œstartä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ£¬startÎª¸º*/
 	public void testInvalidRegionMatches2(){
 		String str1 = "String";
 		String str2 = "javaString";
 		assertTrue("testInvalidRegionMatches2", str1.regionMatches(0, str2, -1, str1.length()));
 	}
 	
-	/*æ— æ•ˆå€¼ï¼ŒthisStart+lengrh å¤§äºæ­¤ str1 å¯¹è±¡çš„é•¿åº¦*/
+	/*ÎŞĞ§Öµ£¬thisStart+lengrh ´óÓÚ´Ë str1 ¶ÔÏóµÄ³¤¶È*/
 	public void testInvalidRegionMatches3(){
 		String str1 = "String";
 		String str2 = "javaString";
 		assertTrue("testInvalidRegionMatches3", str1.regionMatches(2, str2, 4, str1.length()));
 	}
 	
-	/*æ— æ•ˆå€¼ï¼Œstart+lengrh å¤§äºæ­¤ str2å¯¹è±¡çš„é•¿åº¦*/
+	/*ÎŞĞ§Öµ£¬start+lengrh ´óÓÚ´Ë str2¶ÔÏóµÄ³¤¶È*/
 	public void testInvalidRegionMatches4(){
 		String str1 = "String";
 		String str2 = "javaString";
 		assertTrue("testInvalidRegionMatches4", str1.regionMatches(0, str2, 5, str1.length()));
 	}
 	
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testReplace1(){
 		String str1 = "abfddddddd";
         String str2 = "ccc";
         assertEquals("testReplace1", "abfccccccd", str1.replace("ddd",str2));
 	}
 	
-	/*æœ‰æ•ˆå€¼2*/
+	/*ÓĞĞ§Öµ2*/
 	public void testReplace2(){
 		String str1 = "abd";
 		String str2 = "ccc";
 		assertEquals("testReplace2", "cccacccbcccdccc", str1.replace("",str2));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidReplace(){
 		String str1 = "abd";
 		String str2 = "ccc";
 		assertEquals("testInvalidReplace", "cccacccbcccdccc", str1.replace(null,str2));
 	}
 	
-	/*å¯æ”¯æŒæ­£åˆ™è¡¨è¾¾å¼*/
+	/*¿ÉÖ§³ÖÕıÔò±í´ïÊ½*/
 	public void testReplaceAll(){
 		String str = "a.b123456";   
 		assertEquals("testReplaceAll", "a.b12*456", str.replaceAll("3", "*"));
 		assertEquals("testReplaceAll", "a.b******", str.replaceAll("\\d", "*"));
 	}
 	
-	/*æ›¿æ¢ç¬¬ä¸€ä¸ª*/
+	/*Ìæ»»µÚÒ»¸ö*/
 	public void testReplaceFirst(){
 		 String str = "a.b?c,?d%g.d'fd";   
          String str1 = str.replaceFirst("\\?","jun");
@@ -501,8 +501,8 @@ public class SampleStringTest extends TestCase{
          assertEquals("testReplaceFirst", "ajunb?c,?d%g.d'fd", str2);
 	}
 	
-	/** æœªä½¿ç”¨æ–­è¨€,consoleè¾“å‡º */
-	/*æœ‰æ•ˆå€¼1*/
+	/** Î´Ê¹ÓÃ¶ÏÑÔ,consoleÊä³ö */
+	/*ÓĞĞ§Öµ1*/
 	public void testSplit1(){
 		String str = "a:b:c:d:e:F";
         String[]str1 = str.split(":");
@@ -511,8 +511,8 @@ public class SampleStringTest extends TestCase{
         }
 	}
 	
-	/** æœªä½¿ç”¨æ–­è¨€,consoleè¾“å‡º */
-	/*æœ‰æ•ˆå€¼2*/
+	/** Î´Ê¹ÓÃ¶ÏÑÔ,consoleÊä³ö */
+	/*ÓĞĞ§Öµ2*/
 	public void testSplit2(){
 		String str = "boo:and:foo";
 		String[]str1 = str.split(":",2);
@@ -520,28 +520,28 @@ public class SampleStringTest extends TestCase{
 		System.out.println(str1[1]);
 	}
 	
-	/*æœ‰æ•ˆå€¼1*/
+	/*ÓĞĞ§Öµ1*/
 	public void testStartsWith1(){
 		String str = "hello";
         String s = "he";
         assertTrue("testStartsWith1", str.startsWith(s));
 	}
 
-	/*æœ‰æ•ˆå€¼2*/
+	/*ÓĞĞ§Öµ2*/
 	public void testStartsWith2(){
 		String str = "hello";
 		String s = "";
 		assertTrue("testStartsWith2", str.startsWith(s));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidStartsWith2(){
 		String str = "hello";
 		String s = null;
 		assertTrue("testInvalidEndsWith", str.startsWith(s));
 	}
 	
-	/*æœ‰æ•ˆå€¼,ä¸€ä¸ªå‚æ•°*/
+	/*ÓĞĞ§Öµ,Ò»¸ö²ÎÊı*/
 	public void testSubstring1(){
 		String str="hellochinese";
         assertEquals(
@@ -550,7 +550,7 @@ public class SampleStringTest extends TestCase{
         		str.substring(3));
 	}
 	
-	/*æœ‰æ•ˆå€¼ï¼Œä¸¤ä¸ªå‚æ•°*/
+	/*ÓĞĞ§Öµ£¬Á½¸ö²ÎÊı*/
 	public void testSubstring2(){
 		String str="hellochinese";
 		assertEquals(
@@ -559,7 +559,7 @@ public class SampleStringTest extends TestCase{
 				str.substring(0,3));
 	}
 
-	/*æ— æ•ˆå€¼,ä¸€ä¸ªå‚æ•°*/
+	/*ÎŞĞ§Öµ,Ò»¸ö²ÎÊı*/
 	public void testInvalidSubstring(){
 		String str="hell";
 		assertEquals(
@@ -568,7 +568,7 @@ public class SampleStringTest extends TestCase{
 				str.substring(9));
 	}
 	
-	/*æ— æ•ˆå€¼,beginIndexä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,beginIndexÎª¸º*/
 	public void testInvalidSubstring1(){
 		String str="hellochinese";
 		assertEquals(
@@ -577,7 +577,7 @@ public class SampleStringTest extends TestCase{
 				str.substring(-1,3));
 	}
 	
-	/*æ— æ•ˆå€¼,endIndex ä¸ºè´Ÿ*/
+	/*ÎŞĞ§Öµ,endIndex Îª¸º*/
 	public void testInvalidSubstring2(){
 		String str="hellochinese";
 		assertEquals(
@@ -586,7 +586,7 @@ public class SampleStringTest extends TestCase{
 				str.substring(0,-1));
 	}
 	
-	/*æ— æ•ˆå€¼,endIndex å¤§äº length()*/
+	/*ÎŞĞ§Öµ,endIndex ´óÓÚ length()*/
 	public void testInvalidSubstring3(){
 		String str="hellochinese";
 		assertEquals(
@@ -595,7 +595,7 @@ public class SampleStringTest extends TestCase{
 				str.substring(0,str.length()+1));
 	}
 	
-	/*æ— æ•ˆå€¼, beginIndex å¤§äº endIndex*/
+	/*ÎŞĞ§Öµ, beginIndex ´óÓÚ endIndex*/
 	public void testInvalidSubstring4(){
 		String str="hellochinese";
 		assertEquals(
@@ -605,7 +605,7 @@ public class SampleStringTest extends TestCase{
 	}
 	
 	
-	/** æœªä½¿ç”¨æ–­è¨€,consoleè¾“å‡º */
+	/** Î´Ê¹ÓÃ¶ÏÑÔ,consoleÊä³ö */
 	public void testToCharArray(){
 		 String str = "Hello";
          char[] new_str = str.toCharArray();
@@ -614,19 +614,19 @@ public class SampleStringTest extends TestCase{
          }
 	}
 	
-	/*è½¬ä¸ºå°å†™*/
+	/*×ªÎªĞ¡Ğ´*/
 	public void testToLowerCase(){
 		String str="ABdFGjke123";
         assertEquals("testToLowerCase", "abdfgjke123", str.toLowerCase(Locale.CHINESE));
 	}
 	
-	/*è½¬ä¸ºå¤§å†™*/
+	/*×ªÎª´óĞ´*/
 	public void testToUpperCase(){
 		String str="ABdFGjke123";
         assertEquals("testToUpperCase", "ABDFGJKE123", str.toUpperCase(Locale.CHINESE));
 	}
 	
-	/*å»æ‰å¤´å°¾ç©ºæ ¼*/
+	/*È¥µôÍ·Î²¿Õ¸ñ*/
 	public void testTrim(){
 		String str="            hi   hi   hi            ";   
         assertEquals("testTrim", "hi   hi   hi", str.trim());
@@ -711,7 +711,7 @@ public class SampleStringTest extends TestCase{
 				String.valueOf(num));
 	}
 	
-	/*æ— æ•ˆå€¼*/
+	/*ÎŞĞ§Öµ*/
 	public void testInvalidValueOfBoolean(){
 		assertEquals(
 				"testInvalidValueOfBoolean", 
@@ -732,3 +732,4 @@ public class SampleStringTest extends TestCase{
 		assertEquals("", "SampleStr", subStr);
 	}
 }
+
